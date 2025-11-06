@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+  overflow-y: hidden; 
+  overflow: auto;
+}
+#left{
+  width: 215.6px;
+  padding: 0px;
+  height: 324px;
+  /*box-sizing: border-box;*/
+  background-color: rgb(255, 255, 255,1);
+  line-height: 0px;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 146.88px; /* 假设从页面顶部开始，向下10px */  
+  left: 19.6px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: black; /* 更改文字颜色为白色 */
+  font-family: '楷体', '楷体_GB2312',Arial, sans-serif;
+  transform: translateX(0); /* 初始位置 */ 
+  transition: transform 1s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */        
+}
+
+#left.hidden {  
+transform: translateX(-85%); /* 向左移动元素 */ 
+} 
+#d3Chart{
+  width: 392px;
+  padding: 0px;
+  height: 226.8px;
+  /* box-sizing: border-box;*/
+  background-color:  rgb(255, 255, 255,0.1);
+  line-height: 1;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 21.5px; /* 假设从页面顶部开始，向下10px */  
+  right: 19.63px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: black; /* 更改文字颜色为白色 */
+  border-radius: 4px; /* 为所有四个角添加10px的圆角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transform: translateX(0); /* 初始位置 */ 
+  transition: transform 1.2s ease, width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  transform-origin: center; /* 放大时从中心开始 */
+ 
+  
+}
+
+#d3Chart.hidden {  
+transform: translateX(-85%); /* 向左移动元素 */ 
+}
+
+#d3Chart1{
+  width: 392px;
+  padding: 0px;
+  height: 226.8px;
+  /* box-sizing: border-box;*/
+  background-color:  rgb(255, 255, 255,0.1);
+  line-height: 0px;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+   color: rgb(255, 255, 255); /* 更改文字颜色为白色 */
+  top: 253.7px; /* 假设从页面顶部开始，向下10px */  
+  right: 19.6px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  border-radius: 4px; /* 为所有四个角添加10px的圆角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transform: translateX(0); /* 初始位置 */ 
+  transition: transform 1.4s ease, width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  transform-origin: center; /* 放大时从中心开始 */
+  text-align: center;
+ 
+  
+}
+
+#d3Chart1.hidden {  
+transform: translateX(-85%); /* 向左移动元素 */ 
+}
+#d3Chart2{
+  width: 392px;
+  padding: 0px;
+  height: 226.8px;
+  /* box-sizing: border-box;*/
+  background-color:  rgb(255, 255, 255,1);
+  line-height: 0.5;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 485.9px; /* 假设从页面顶部开始，向下10px */  
+  right: 19.6px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: black; /* 更改文字颜色为白色 */
+  border-radius: 4px; /* 为所有四个角添加10px的圆角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transform: translateX(0); /* 初始位置 */ 
+  transition: transform 1.6s ease, width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  transform-origin: center; /* 放大时从中心开始 */
+ 
+  
+}
+table {  
+width: 100%; /* 表格宽度占满容器 */  
+border-collapse: collapse;  
+}  
+
+th, td {  
+border: 1px solid #ddd;  
+padding: 8px;  
+text-align: left;  
+/*color: white;  如果需要，设置表格文本颜色为白色 */  
+}
+#d3Chart2.hidden {  
+transform: translateX(-85%); /* 向左移动元素 */ 
+}
+
+#info {
+  width: 392px;
+  padding: 0px;
+  height: 226.8px;
+  /*box-sizing: border-box;*/
+  background-color: rgb(255, 255, 255,1);
+  line-height: 0.5;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 718.1px; /* 假设从页面顶部开始，向下10px */  
+  right: 19.6px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: black; /* 更改文字颜色为白色 */
+  transform: translateX(0); /* 初始位置 */ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transition: transform 0.8s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  border-radius: 4px;
+  
+  
+}
+#info.hidden {  
+transform: translateX(-85%); /* 向左移动元素 */ 
+}
+
+#renderCanvas {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  touch-action: none;
+  
+}
+#info1 {
+  width: 323.4px;
+  padding: 0px;
+  height: 216px;
+  /*box-sizing: border-box;*/
+  background-color: rgb(255, 255, 255,1);
+  line-height: 0px;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  bottom: 45.9px; /* 假设从页面顶部开始，向下10px */  
+  left: 19.6px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color:black; /* 更改文字颜色为白色 */
+  font-family: '楷体', '楷体_GB2312',Arial, sans-serif;
+  transform: translateX(0); /* 初始位置 */ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transition: transform 0.8s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  border-radius: 4px;
+  
+  
+}
+#info2 {
+  width: 323.4px;
+  padding: 0px;
+  height: 216px;
+  /*box-sizing: border-box;*/
+  background-color: rgb(255, 255, 255,1);
+  line-height: 0px;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  bottom: 45.9px; /* 假设从页面顶部开始，向下10px */  
+  left: 348.88px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: black; /* 更改文字颜色为白色 */
+  font-family: '楷体', '楷体_GB2312',Arial, sans-serif;
+  transform: translateX(0); /* 初始位置 */ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transition: transform 0.8s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  border-radius: 4px;
+  
+  
+  
+}
+#info3 {
+  width: 323.4px;
+  padding: 0px;
+  height: 216px;
+  /*box-sizing: border-box;*/
+  background-color: rgb(255, 255, 255,1);
+  line-height: 0px;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  bottom: 45.9px; /* 假设从页面顶部开始，向下10px */  
+  left: 678.16px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: rgb(0, 0, 0); /* 更改文字颜色为白色 */
+  font-family: '楷体', '楷体_GB2312',Arial, sans-serif;
+  transform: translateX(0); /* 初始位置 */ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transition: transform 0.8s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  border-radius: 4px;
+  
+  
+  
+}
+#info4 {
+  width: 100%;
+  padding: 0px;
+  height: 45px;
+  /*box-sizing: border-box;*/
+  background-color: rgb(8, 41, 129);
+  line-height: 0.5;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 0%; /* 假设从页面顶部开始，向下10px */  
+  right: 0%;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  transform: translateX(0); /* 初始位置 */ 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transition: transform 0.8s ease; /* 平滑过渡效果 */  
+  /* cursor: pointer; 鼠标悬停时显示指针 */
+  border-radius: 0px;
+  
+  
+}
+#info4-1 {
+  width: 392px;
+  padding: 0px;
+  height: 45px;
+  /*box-sizing: border-box;*/
+  background-color: rgba(161, 150, 150, 0);
+  line-height: 1;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 0%; /* 假设从页面顶部开始，向下10px */  
+  left: 39.2px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  transform: translateX(0); /* 初始位置 */ 
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 添加阴影以增加立体感 */
+  transition: transform 0.8s ease; /* 平滑过渡效果 */  
+  /* cursor: pointer; 鼠标悬停时显示指针 */
+  border-radius: 0px;
+  
+  
+}
+
+#main {
+  width: 191.1px;
+  padding: 0px;
+  height: 195px;
+  /* box-sizing: border-box;*/
+  background-color:  rgb(255, 255, 255,1);
+  line-height: 1;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 55px; /* 假设从页面顶部开始，向下10px */  
+  right: 19.6px;
+  
+  color: rgb(255, 255, 255); /* 更改文字颜色为白色 */
+  border-radius: 4px; /* 为所有四个角添加10px的圆角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transform: translateX(0); /* 初始位置 */ 
+  transition: transform 1.2s ease, width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  transform-origin: center; /* 放大时从中心开始 */
+}
+#main1 {
+  width: 191.1px;
+  padding: 0px;
+  height: 195px;
+  /* box-sizing: border-box;*/
+  background-color:  rgba(255, 255, 255, 1);
+  line-height: 1;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  top: 55px; /* 假设从页面顶部开始，向下10px */  
+  right: 220.5px;
+  overflow: hidden; /* 隐藏溢出内容 */  
+  color: black; /* 更改文字颜色为白色 */
+  border-radius: 4px; /* 为所有四个角添加10px的圆角 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 添加阴影以增加立体感 */
+  transform: translateX(0); /* 初始位置 */ 
+  transition: transform 1.2s ease, width 0.5s ease, height 0.5s ease, top 0.5s ease, left 0.5s ease; /* 平滑过渡效果 */  
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  transform-origin: center; /* 放大时从中心开始 */
+}
+#main2 {
+  width: 150px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 10px; /* 假设从页面顶部开始，向下10px */  
+  left: 10px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}
+p{
+  display:inline-block;
+}
+#main3 {
+  width: 150px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 10px; /* 假设从页面顶部开始，向下10px */  
+  left: 200px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}
+#main4 {
+  width: 150px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 120px; /* 假设从页面顶部开始，向下10px */  
+  left: 200px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}
+#main5 {
+  width: 150px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 120px; /* 假设从页面顶部开始，向下10px */  
+  left: 10px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}
+#main6 {
+  width: 150px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 10px; /* 假设从页面顶部开始，向下10px */  
+  left: 10px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}
+#main7 {
+  width: 150px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 10px; /* 假设从页面顶部开始，向下10px */  
+  left: 200px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}
+#main8 {
+  width: 180px;
+  padding: 10px;
+  height: 60px;
+  background-color:  rgba(216, 29, 29, 0);
+  line-height: 0;
+  position: absolute; /* 将位置设置为绝对定位 */ 
+  overflow: hidden; /* 隐藏溢出内容 */
+  top: 120px; /* 假设从页面顶部开始，向下10px */  
+  left: 10px; 
+  font-weight: bold;
+  font-family: "Microsoft YaHei", "SimHei", "Heiti SC", sans-serif;
+  text-align: center;
+
+}

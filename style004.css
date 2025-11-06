@@ -1,0 +1,281 @@
+/* 基础样式 - 移除了不必要的过渡和阴影 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 深色模式样式 - 简化渐变 */
+body.dark-mode {
+    background: #0f2027;
+    color: #f0f0f0;
+}
+
+/* 移动端菜单按钮 - 简化效果 */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    flex-direction: column;
+    cursor: pointer;
+}
+
+body.dark-mode .mobile-menu-btn {
+    background: rgba(15, 25, 35, 0.9);
+}
+
+.mobile-menu-btn span {
+    width: 20px;
+    height: 2px;
+    background: #3498db;
+    margin: 2px 0;
+}
+
+body.dark-mode .mobile-menu-btn span {
+    background: #00bbff;
+}
+
+/* 侧边栏样式 - 移除模糊效果 */
+.sidebar {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    border-right: 1px solid rgba(200, 200, 200, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    width: 180px;
+}
+
+body.dark-mode .sidebar {
+    background: rgba(15, 25, 35, 0.95);
+}
+
+/* 主内容区样式 - 简化 */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 180px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+body.dark-mode .main-content {
+    background-color: #0c151f;
+}
+
+/* 头部样式 - 移除模糊效果 */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 90;
+}
+
+body.dark-mode .header {
+    background: rgba(15, 25, 35, 0.95);
+}
+
+/* 3D场景容器 - 简化效果 */
+.scene-container {
+    flex-grow: 1;
+    position: relative;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .scene-container {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    outline: none;
+}
+
+/* 控制按钮 - 简化悬停效果 */
+.control-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(52, 152, 219, 0.5);
+    border-radius: 5px;
+    color: #2980b9;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+body.dark-mode .control-btn {
+    background: rgba(15, 25, 35, 0.8);
+}
+
+/* 卡片样式 - 移除变换和阴影 */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+body.dark-mode .card {
+    background: rgba(15, 25, 35, 0.7);
+}
+
+/* 表格样式 - 简化 */
+.data-table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+body.dark-mode .data-table {
+    background: rgba(15, 25, 35, 0.7);
+}
+
+/* 弹窗样式 - 移除模糊效果 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #ffffff;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+body.dark-mode .modal {
+    background: #0f2027;
+}
+
+/* 全屏模式 - 保持必要样式 */
+body.fullscreen-mode {
+    overflow: hidden;
+}
+
+body.fullscreen-mode .sidebar,
+body.fullscreen-mode .header,
+body.fullscreen-mode .dashboard-cards,
+body.fullscreen-mode .data-table,
+body.fullscreen-mode .mobile-menu-btn {
+    display: none;
+}
+
+body.fullscreen-mode .main-content {
+    margin-left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body.fullscreen-mode .scene-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode.fullscreen-mode .scene-container {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式设计 - 简化 */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .scene-controls {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+/* 移除的高开销属性 */
+/*
+以下属性被移除：
+- 所有transition属性
+- 所有box-shadow属性
+- 所有backdrop-filter模糊效果
+- 复杂的渐变背景
+- transform变换效果
+- 不必要的动画效果
+*/
